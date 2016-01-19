@@ -33,7 +33,7 @@ defmodule Plug.Router do
   This means users can easily hook into the router mechanism and add
   behaviour before match, before dispatch or after both.
 
-  To specify private options on `match` that can be used by plugs 
+  To specify private options on `match` that can be used by plugs
   before `dispatch` pass an option with key `:private` containing a map.
   Example:
 
@@ -332,8 +332,8 @@ defmodule Plug.Router do
     {quote(do: conn), method, match, host_match, guards, private}
   end
 
-  # Entry point for both forward and match that is actually
-  # responsible to compile the route.
+  # Entry point for both forward and match, is
+  # responsible for compiling the route.
   defp compile(method, expr, options, contents) do
     {body, options} =
       cond do
